@@ -7,7 +7,9 @@
     "preinstall": "scripts/build_tensorflow.sh",
     "postinstall": "node-gyp configure build",
     "build": "node-gyp build",
-    "test": "node test/index.js"
+    "test": "node test/index.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,8 @@
   "dependencies": {
     "nan": "^2.4.0",
     "node-gyp": "^3.4.0",
-    "segfault-handler": "^1.0.0"
-  }
+    "segfault-handler": "^1.0.0",
+    "snyk": "^1.83.0"
+  },
+  "snyk": true
 }
